@@ -1,0 +1,57 @@
+.titleContainer {
+  text-align: center;
+  margin-bottom: 40px; /* Adjust spacing as needed */
+  position: relative;
+  display: flex; /* Use flex to center the title and manage lines */
+  align-items: center; /* Vertically align title and lines */
+  justify-content: center; /* Center the title block */
+}
+
+/* Grey lines on either side */
+.titleContainer::before,
+.titleContainer::after {
+  content: '';
+  flex-grow: 1; /* Lines take up remaining space */
+  height: 1px;
+  background-color: #e0e0e0; /* Light grey line color */
+  margin: 0 15px; /* Space between line and title block */
+}
+
+.title {
+  display: inline-block; /* Allow padding and background */
+  background-color: #ffcc00; /* Yellow/Gold background */
+  color: #000; /* Black text */
+  padding: 10px 30px; /* Adjust padding */
+  font-size: 1.4rem; /* Adjust font size */
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px; /* Make ends fully rounded */
+  margin: 0; /* Remove default h2 margin */
+  white-space: nowrap; /* Prevent title from wrapping */
+  position: relative; /* Ensure title is above lines if overlapping */
+  z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+    padding: 12px 40px;
+  }
+  .titleContainer {
+      margin-bottom: 50px;
+  }
+  .titleContainer::before,
+  .titleContainer::after {
+      margin: 0 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .titleContainer {
+        margin-bottom: 60px;
+    }
+} 

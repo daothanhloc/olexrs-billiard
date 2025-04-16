@@ -1,0 +1,135 @@
+.productDetailPage {
+  padding: 40px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 30px;
+}
+
+/* Image Section */
+.imageSection {
+  width: 100%;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Info Section */
+.infoSection {
+  width: 100%;
+}
+
+.productName {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.category {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Pricing */
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e44d26; /* Match featured products price color */
+}
+
+.originalPrice {
+  font-size: 1.2rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.discountBadge {
+  background-color: #e44d26;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Add to Cart Button -> Purchase Button */
+.purchaseButton {
+  width: 100%; /* Make button full width */
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--primary-color); 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* margin-top: 20px; Spacing applied to link wrapper */
+}
+
+.purchaseButton:hover {
+  background-color: #0056b3; /* Darker shade of primary */
+}
+
+/* Link wrapper for the button */
+.purchaseLink {
+  display: block; /* Ensure link takes full width */
+  text-decoration: none; /* Remove underline */
+  margin-top: 20px; /* Add spacing */
+}
+
+/* Description */
+.description {
+  margin-top: 30px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Optional Full Description Section */
+.fullDescriptionSection {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+/* --- Tablet and Up Styles (>= 768px) --- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 40px;
+  }
+  .productName {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Desktop Styles (>= 1024px) --- */
+@media (min-width: 1024px) {
+  .grid {
+    gap: 60px;
+    /* Example: Make image column slightly smaller */
+    /* grid-template-columns: 2fr 3fr; */
+  }
+  .productName {
+      font-size: 2.8rem;
+  }
+} 

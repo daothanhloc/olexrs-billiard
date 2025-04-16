@@ -1,0 +1,136 @@
+.footer {
+  background-color: #1a1a1a; /* Dark background */
+  color: #a0a0a0; /* Light grey text */
+  padding-top: 50px; /* Padding above columns */
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.footerContainer {
+  /* Container already provides centering and padding */
+}
+
+/* Optional Top Section */
+.footerTop {
+  display: flex;
+  justify-content: space-around; /* Example layout */
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333; /* Separator */
+}
+
+/* Grid Layout */
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column mobile */
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+.footerColumn {
+  /* Styling for each column */
+}
+
+.columnTitle {
+  color: #fff; /* White title */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Contact Info */
+.contactInfo {
+  /* Specific styles if needed */
+}
+
+.contactItem {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start; /* Align icon top */
+}
+
+.contactItem .icon {
+  margin-right: 10px;
+  margin-top: 4px; /* Align icon slightly */
+  flex-shrink: 0;
+  color: var(--primary-color); /* Use theme color for icons */
+}
+
+.contactItem strong {
+  color: #ccc; /* Slightly brighter label */
+  margin-right: 5px;
+}
+
+.contactItem a {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactItem a:hover {
+  color: #fff;
+}
+
+/* Navigation Lists */
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 8px;
+}
+
+.navLink {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+/* Social Links */
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.socialIconLink {
+  color: #a0a0a0;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.socialIconLink:hover {
+  color: #fff;
+}
+
+/* Bottom Bar */
+.footerBottom {
+  background-color: #0d0d0d; /* Slightly darker bottom */
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* --- Tablet and Up Styles (>= 768px) --- */
+@media (min-width: 768px) {
+  .footerGrid {
+    /* Adjust columns for tablet/desktop */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px;
+  }
+}
+
+/* --- Desktop Styles (>= 1024px) --- */
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  }
+} 

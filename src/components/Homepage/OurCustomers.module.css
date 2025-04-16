@@ -1,0 +1,95 @@
+.ourCustomers {
+  padding: 40px 0 60px; /* Add more bottom padding for controls */
+  background-color: var(--background-color); /* Use variable */
+}
+
+.swiperContainer {
+  /* Swiper container itself doesn't need much styling usually */
+  padding-bottom: 20px; /* Space for controls if needed */
+}
+
+.slide {
+  /* Styles for the SwiperSlide component */
+  height: auto; /* Allow slide height to adjust to content */
+}
+
+/* Updated Customer Item with Background */
+.customerItem {
+  position: relative; /* Needed for overlay */
+  width: 100%;
+  min-height: 250px; /* Example height, adjust as needed */
+  border-radius: 8px;
+  overflow: hidden; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex; /* Use flex to position overlay content */
+  flex-direction: column; /* Stack content */
+  justify-content: flex-end; /* Align content to bottom */
+  color: #fff; /* Default text color on overlay */
+  transition: transform 0.3s ease;
+}
+
+.customerItem:hover {
+  transform: scale(1.02); /* Slight grow effect */
+}
+
+/* Overlay for text readability */
+.itemOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.1) 70%, transparent 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align text content to bottom */
+}
+
+.customerInfo {
+  position: relative; /* Ensure text is above gradient */
+  z-index: 2;
+}
+
+.customerName {
+  font-size: 1.2rem; 
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.customerAddress {
+  font-size: 0.9rem;
+  color: #eee;
+  line-height: 1.5;
+}
+
+.customerAddress strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .customerItem {
+    min-height: 300px; /* Larger height on desktop */
+  }
+  .customerName {
+    font-size: 1.3rem;
+  }
+}
+
+/* Optional: Customize Swiper Navigation Arrows */
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: var(--primary-color); /* Use theme color */
+  top: 50%; /* Adjust vertical position if needed */
+  transform: translateY(-50%); 
+}
+
+:global(.swiper-button-next::after),
+:global(.swiper-button-prev::after) {
+  font-size: 24px; /* Adjust arrow size */
+} 

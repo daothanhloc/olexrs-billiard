@@ -1,0 +1,231 @@
+/* Basic structure and placeholder styles for Header */
+
+.header {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Bar Styles */
+.topBar {
+  background-color: var(--dark-background);
+  color: var(--light-text);
+  padding: 8px 0;
+  font-size: 0.75rem; /* Slightly smaller base font */
+}
+
+.topBarContainer {
+  display: flex;
+  flex-direction: column; /* Stack vertically by default */
+  align-items: center; /* Center items on mobile */
+  gap: 8px;
+}
+
+.contactInfo,
+.topBarLinks {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: center; /* Center items */
+  align-items: center;
+  gap: 15px; /* Adjust gap */
+}
+
+.contactInfo span,
+.topBarLinks a,
+.topBarLinks button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--light-text);
+  text-decoration: none;
+}
+
+.topBarLinks a:hover,
+.topBarLinks button:hover {
+  color: #fff;
+}
+
+.searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+  color: var(--light-text);
+}
+
+/* Main Navigation Styles */
+.mainNav {
+  background-color: var(--background-color);
+  padding: 15px 0;
+}
+
+.mainNavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem; /* Adjust size for mobile */
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Hide desktop menu by default */
+.menu {
+  display: none;
+}
+
+.cartInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Hide cart text on mobile */
+.cartText {
+  display: none;
+}
+
+/* Container for right-side elements */
+.rightNav {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between cart and menu toggle */
+}
+
+/* Mobile Menu Toggle Button */
+.mobileMenuButton {
+  display: block; /* Show on mobile */
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.8rem; /* Adjust icon size */
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icon {
+  /* Default icon styles */
+  vertical-align: middle; /* Better alignment */
+}
+
+/* --- Tablet and Up Styles (>= 768px) --- */
+@media (min-width: 768px) {
+  .topBarContainer {
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between;
+    gap: 20px; /* Restore larger gap */
+  }
+
+  .contactInfo,
+  .topBarLinks {
+    justify-content: flex-start; /* Align start */
+  }
+
+  .logo a {
+    font-size: 1.8rem; /* Restore larger logo size */
+  }
+
+  .menu {
+    display: flex; /* Show desktop menu */
+    list-style: none;
+    gap: 25px; /* Adjust gap */
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem; /* Adjust font size */
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+
+  .menu li a:hover {
+    color: var(--primary-color);
+  }
+
+  .mobileMenuButton {
+    display: none; /* Hide hamburger on desktop */
+  }
+
+  .cartText {
+    display: inline; /* Show cart text on tablet+ */
+  }
+
+  .rightNav {
+    gap: 20px; /* Adjust gap for larger screens if needed */
+  }
+}
+
+/* --- Desktop Styles (>= 1024px) --- */
+@media (min-width: 1024px) {
+  .topBar {
+     font-size: 0.8rem; /* Restore original font size */
+  }
+  .menu {
+      gap: 30px; /* Restore larger menu gap */
+  }
+  .menu li a {
+      font-size: 0.9rem; /* Restore original font size */
+  }
+}
+
+/* --- Mobile Menu (Overlay/Panel) --- */
+/* Styles for the actual mobile menu panel will be added here later */
+.mobileMenu {
+  /* Basic styles for positioning, background, etc. */
+  display: none; /* Hidden by default, shown via JS/state */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%; /* Example width */
+  height: 100%;
+  background-color: var(--dark-background);
+  color: #fff;
+  padding: 20px;
+  z-index: 1000;
+  /* Add transitions for slide-in effect */
+}
+
+.mobileMenu.open {
+  display: block; /* Show when open */
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.mobileMenu li a {
+  display: block;
+  padding: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #444; /* Separator */
+}
+
+.mobileMenu li:last-child a {
+  border-bottom: none;
+}
+
+.closeButton {
+ position: absolute;
+ top: 15px;
+ right: 15px;
+ background: none;
+ border: none;
+ color: #fff;
+ font-size: 2rem;
+ cursor: pointer;
+} 

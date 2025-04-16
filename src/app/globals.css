@@ -1,6 +1,64 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+               Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Basic sans-serif stack */
+  color: var(--text-color); /* Use text color var */
+  background: var(--background-color); /* Use background color var */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+/* You can add global variables or other base styles here */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --container-width: 1500px; /* Example variable */
+  --primary-color: #007bff; /* Example variable */
+  --text-color: #ffffff;
+  --background-color: #0a0a0a; /* Changed to light gray */
+  --dark-background: #252525;
+  --light-text: #aaaaaa;
+}
+
+/* Add container class */
+.container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px; /* Add some padding */
+  padding-right: 15px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,9 +75,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
